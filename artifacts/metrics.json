@@ -1,0 +1,26 @@
+{
+  "dataset": "Synthetic store-level demand and promotion data",
+  "mode": "retail",
+  "seed": 42,
+  "split": "chronological last 90 days",
+  "features": [
+    "lag7_sales",
+    "last7_mean",
+    "day_of_week",
+    "promo",
+    "day_index"
+  ],
+  "models": {
+    "Random Forest": {
+      "mae": 4.716,
+      "rmse": 5.912,
+      "wape": 0.0929
+    },
+    "Seasonal naive": {
+      "mae": 9.033,
+      "rmse": 11.039,
+      "wape": 0.1781
+    }
+  },
+  "limitation": "Synthetic results only; not verified on a real-world production dataset."
+}
